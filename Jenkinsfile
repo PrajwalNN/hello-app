@@ -20,8 +20,10 @@ pipeline {
 
             steps {
 
-                git 'https://github.com/PrajwalNN/hello-app.git'
-
+		git(
+    			url: 'git@github.com:PrajwalNN/hello-app.git',
+    			credentialsId: 'github-ssh'
+		)
             }
 
         }
