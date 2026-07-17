@@ -78,23 +78,6 @@ pipeline {
 
         }
 
-        stage('Deploy to Docker Swarm') {
-
-            steps {
-
-                sh '''
-                docker service update \
-                --image $IMAGE_NAME:latest hello-service \
-                || \
-                docker service create \
-                --name hello-service \
-                -p 8080:8080 \
-                $IMAGE_NAME:latest
-                '''
-            }
-
-        }
-
     }
 
 }
