@@ -4,7 +4,7 @@ pipeline {
 
     environment {
 
-        IMAGE_NAME="dockerhub_username/hello-app"
+        IMAGE_NAME="prajwalnn/hello-app"
 
     }
 
@@ -20,7 +20,7 @@ pipeline {
 
             steps {
 
-                git 'https://github.com/username/hello-app.git'
+                git 'https://github.com/PrajwalNN/hello-app.git'
 
             }
 
